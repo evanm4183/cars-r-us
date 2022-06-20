@@ -15,7 +15,7 @@
 }
 
 .selection-box {
-    height: 15rem;
+    height: 12rem;
     width: 33%;
     border: solid black 2px;
     margin: 2% 6% 2% 6%;
@@ -39,4 +39,20 @@
 .custom-car-orders {
     margin-top: 50px;
     margin-left: 5%;
+}
+
+#paints {
+    margin-left: 1rem;
+}
+
+#interiors {
+    margin-left: 1rem;
+}
+
+#wheels {
+    margin-left: 1rem;
+}
+
+#technologies {
+    margin-left: 1rem;
 }

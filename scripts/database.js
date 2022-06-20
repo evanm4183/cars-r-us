@@ -6,10 +6,10 @@ const database = {
         {id: 4, color: "Spring Green", price: 400}
     ],
     interiors: [
-        {id: 1, type: "Beige Fabric", price: 1000},
-        {id: 2, type: "Charcoal Fabric", price: 2000},
-        {id: 3, type: "White Leather", price: 3000},
-        {id: 4, type: "Black Leather", price: 4000}
+        {id: 1, material: "Beige Fabric", price: 1000},
+        {id: 2, material: "Charcoal Fabric", price: 2000},
+        {id: 3, material: "White Leather", price: 3000},
+        {id: 4, material: "Black Leather", price: 4000}
     ],
     technologies: [
         {id: 1, package: "Basic Package", price: 5000},
