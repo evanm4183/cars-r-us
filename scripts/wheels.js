@@ -1,4 +1,11 @@
-import { getWheels } from "./database.js"
+import { getWheels, setOrderProperty } from "./database.js"
+
+document.addEventListener("change", event => {
+    if (event.target.id === "wheels") {
+        const optionValue = parseInt(event.target.value) 
+        setOrderProperty("wheelId", optionValue)
+    }
+})
 
 const wheels = getWheels()
 

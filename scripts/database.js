@@ -26,7 +26,7 @@ const database = {
     orders: []
 }
 
-let orderInProgress = {}
+export let orderInProgress = {}
 
 export const getPaints = () => {
     return database.paints.map(paint => ({...paint}))

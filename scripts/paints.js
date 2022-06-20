@@ -1,4 +1,11 @@
-import { getPaints } from "./database.js"
+import { getPaints, setOrderProperty } from "./database.js"
+
+document.addEventListener("change", event => {
+    if (event.target.id === "paints") {
+        const optionValue = parseInt(event.target.value) 
+        setOrderProperty("paintId", optionValue)
+    }
+})
 
 const paints = getPaints()
 

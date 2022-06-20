@@ -1,4 +1,11 @@
-import { getTechnologies } from "./database.js"
+import { getTechnologies, setOrderProperty } from "./database.js"
+
+document.addEventListener("change", event => {
+    if (event.target.id === "technologies") {
+        const optionValue = parseInt(event.target.value) 
+        setOrderProperty("technologyId", optionValue)
+    }
+})
 
 const technologies = getTechnologies()
 

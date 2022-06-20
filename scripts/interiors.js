@@ -1,4 +1,11 @@
-import { getInteriors } from "./database.js"
+import { getInteriors, setOrderProperty } from "./database.js"
+
+document.addEventListener("change", event => {
+    if (event.target.id === "interiors") {
+        const optionValue = parseInt(event.target.value) 
+        setOrderProperty("interiorId", optionValue)
+    }
+})
 
 const interiors = getInteriors()
 
