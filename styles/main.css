@@ -1,6 +1,42 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
+#main-title {
+    font-family: "Comfortaa", Arial, sans-serif;
+}
 
-body {
-    background-color: green;
+#container {
+    font-family: "Comfortaa", Arial, sans-serif;
+}
+
+.boxes {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.selection-box {
+    height: 15rem;
+    width: 33%;
+    border: solid black 2px;
+    margin: 2% 6% 2% 6%;
+    border-radius: 0.5rem;
+    border: 1px dashed dodgerblue;
+    background-color: beige;
+}
+
+.selection-title {
+    margin-left: 1rem;
+}
+
+.order-button {
+    background-color: forestgreen;
+    font-size: 1.5rem;
+    align-items: flex-start;
+    margin-top: 15px;
+    margin-left: 5%;
+}
+
+.custom-car-orders {
+    margin-top: 50px;
+    margin-left: 5%;
 }
