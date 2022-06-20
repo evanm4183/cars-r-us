@@ -53,12 +53,13 @@ export const setOrderProperty = (propertyName, value) => {
 }
 
 export const addOrder = () => {
+    let lastId
     const ordersLength = database.orders.length
 
     if (ordersLength === 0) {
-        const lastId = 0
+        lastId = 0
     } else {
-        const lastId = database.orders[ordersLength - 1].id
+        lastId = database.orders[ordersLength - 1].id
     }
 
     orderInProgress.id = lastId + 1
