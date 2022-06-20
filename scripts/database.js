@@ -52,7 +52,7 @@ export const setOrderProperty = (propertyName, value) => {
     orderInProgress[propertyName] = value
 }
 
-export const addOrder = () => {
+export const submitOrder = () => {
     let lastId
     const ordersLength = database.orders.length
 
@@ -63,7 +63,33 @@ export const addOrder = () => {
     }
 
     orderInProgress.id = lastId + 1
+    orderInProgress.timestamp = Date.now()
     database.orders.push(orderInProgress)
+
     orderInProgress = {}
 }
 
+export const getTotalPrice = (order) => {
+    const [paintObj] = database.paints.filter(paint => paint.id === order.paintId)
+    const [interiorObj] = database.interiors.filter(interior => interior.id === order.interiorId)
+    const [technologyObj] = database.technologies.filter(technology => technology.id === order.technologyId)
+    const [wheelObj] = database.wheels.filter(wheel => wheel.id === order.wheelId)
+
+    return paintObj.price + interiorObj.price + technologyObj.price + wheelObj.price
+}
+
+export const getPrintableOrder = (order) => {
+    let printableObj = {}
+
+    const [paintObj] = database.paints.filter(paint => paint.id === order.paintId)
+    const [interiorObj] = database.interiors.filter(interior => interior.id === order.interiorId)
+    const [technologyObj] = database.technologies.filter(technology => technology.id === order.technologyId)
+    const [wheelObj] = database.wheels.filter(wheel => wheel.id === order.wheelId)
+
+    printableObj.paint = paintObj.color
+    printableObj.interior = interiorObj.material
+    printableObj.technology = technologyObj.package
+    printableObj.wheels = wheelObj.type
+
+    return printableObj
+}

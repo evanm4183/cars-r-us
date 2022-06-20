@@ -2,6 +2,7 @@ import { interiorsDropdownMenu } from "./interiors.js"
 import { paintsDropdownMenu } from "./paints.js"
 import { technologiesDropdownMenu } from "./technologies.js"
 import { wheelsDropdownMenu } from "./wheels.js"
+import { ordersHTML } from "./orders.js"
 
 export const renderAllHTML = () => {
     return `
@@ -23,10 +24,10 @@ export const renderAllHTML = () => {
             ${technologiesDropdownMenu()}
         </section>
     </article>
-    <button class="order-button">Place Car Order</button>
+    <button id="order-button">Place Car Order</button>
     <article class="custom-car-orders">
         <h2 class="custom-car-orders-title">Custom Car Orders</h2>
-
+        ${ordersHTML()}
     </article>
     `
 }

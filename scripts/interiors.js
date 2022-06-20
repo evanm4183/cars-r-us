@@ -10,13 +10,13 @@ document.addEventListener("change", event => {
 const interiors = getInteriors()
 
 export const interiorsDropdownMenu = () => {
-    let HTML = `<select id="interiors"><option value="0">Select an interior material...</option>`
+    let html = `<select id="interiors"><option value="0">Select an interior material...</option>`
 
     for (const interior of interiors) {
-        HTML += `<option value="${interior.id}">${interior.material}</option>`
+        html += `<option value="${interior.id}">${interior.material}</option>`
     }
 
-    HTML += `</select>`
+    html += `</select>`
 
-    return HTML
+    return html
 }

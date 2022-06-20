@@ -28,19 +28,6 @@
     margin-left: 1rem;
 }
 
-.order-button {
-    background-color: forestgreen;
-    font-size: 1.5rem;
-    align-items: flex-start;
-    margin-top: 15px;
-    margin-left: 5%;
-}
-
-.custom-car-orders {
-    margin-top: 50px;
-    margin-left: 5%;
-}
-
 #paints {
     margin-left: 1rem;
 }
@@ -55,4 +42,21 @@
 
 #technologies {
     margin-left: 1rem;
+}
+
+#order-button {
+    background-color: forestgreen;
+    font-size: 1.5rem;
+    align-items: flex-start;
+    margin-top: 15px;
+    margin-left: 5%;
+}
+
+.custom-car-orders {
+    margin-top: 50px;
+    margin-left: 5%;
+}
+
+.custom-order {
+    
 }

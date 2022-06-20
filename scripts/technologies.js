@@ -10,13 +10,13 @@ document.addEventListener("change", event => {
 const technologies = getTechnologies()
 
 export const technologiesDropdownMenu = () => {
-    let HTML = `<select id="technologies"><option value="0">Select a technology package...</option>`
+    let html = `<select id="technologies"><option value="0">Select a technology package...</option>`
 
     for (const technology of technologies) {
-        HTML += `<option value="${technology.id}">${technology.package}</option>`
+        html += `<option value="${technology.id}">${technology.package}</option>`
     }
 
-    HTML += `</select>`
+    html += `</select>`
 
-    return HTML
+    return html
 }
