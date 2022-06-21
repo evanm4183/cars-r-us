@@ -17,7 +17,7 @@ export const ordersHTML = () => {
         printableOrder = getPrintableOrder(order)
         html += `<section class="custom-order">${printableOrder.paint} car with ${printableOrder.wheels} wheels, 
                 ${printableOrder.interior}, and the ${printableOrder.technology} for a total cost of 
-                ${getTotalPrice(order)}</section>`
+                ${getTotalPrice(order).toLocaleString("en-us", {style: "currency", currency: "USD"})}</section>`
     }
 
     return html
